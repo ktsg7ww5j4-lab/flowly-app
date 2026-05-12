@@ -48,9 +48,9 @@ if (fs.existsSync(distIndex)) {
     res.sendFile(distIndex);
   });
 }
+
 app.get("/appss_verify", (_req, res) => {
   res.send("appss_7d3410");
-});
-app.listen(PORT, () => {
+});app.listen(PORT, () => {
   console.log(`Flowly API on http://127.0.0.1:${PORT}`);
 });
