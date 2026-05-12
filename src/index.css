@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  @apply bg-gradient-to-br from-flow-rose via-flow-sky to-flow-mint text-slate-800;
+}
+
+/* Telegram safe area */
+.safe-pb {
+  padding-bottom: env(safe-area-inset-bottom, 12px);
+}
