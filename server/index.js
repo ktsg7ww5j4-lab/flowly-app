@@ -38,6 +38,10 @@ app.get("/api/sync/:telegramUserId", (req, res) => {
   res.json({ payload });
 });
 
+app.get("/appss_verify", (_req, res) => {
+  res.send("appss_7d3410");
+});
+
 const distDir = path.join(__dirname, "../dist");
 const distIndex = path.join(distDir, "index.html");
 
@@ -49,8 +53,6 @@ if (fs.existsSync(distIndex)) {
   });
 }
 
-app.get("/appss_verify", (_req, res) => {
-  res.send("appss_7d3410");
-});app.listen(PORT, () => {
+app.listen(PORT, () => {
   console.log(`Flowly API on http://127.0.0.1:${PORT}`);
 });
